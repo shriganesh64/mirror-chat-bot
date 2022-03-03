@@ -35,10 +35,12 @@ class AllChatContainer extends React.Component {
   }
 
   listenToMessages = () => {
-    FirebaseRDB.listenToData(this.userPath, (data) => {
-      this.setState({ messages: data }, () => {
-        this.scrollToBottom();
-      });
+    FirebaseRDB.listenToData(this.userPath, this.callbackFunction);
+  };
+
+  callbackFunction = (data) => {
+    this.setState({ messages: data }, () => {
+      this.scrollToBottom();
     });
   };
 
@@ -69,9 +71,7 @@ class AllChatContainer extends React.Component {
         userMessage: "",
       },
       () => {
-        FirebaseRDB.pushData(this.userPath, payload).then(() => {
-          this.scrollToBottom();
-        });
+        FirebaseRDB.pushData(this.userPath, payload);
       }
     );
   }

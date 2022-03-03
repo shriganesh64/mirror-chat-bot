@@ -59,7 +59,7 @@
   background-color: var(--primary-light-color) !important;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 850px) {
   .chat-container {
     width: 95%;
   }
