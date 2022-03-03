@@ -123,8 +123,13 @@ class AllChatContainer extends React.Component {
 
           <Paper elevation={0} className={"base-padding"}>
             <form onSubmit={this.onSubmit.bind(this)}>
-              <Grid container spacing={1} alignItems={"center"}>
-                <Grid item xs={11}>
+              <Grid
+                container
+                spacing={1}
+                alignItems={"center"}
+                justifyContent={"space-around"}
+              >
+                <Grid item xs={10} md={11}>
                   <FormControl fullWidth>
                     <TextField
                       autoFocus
@@ -139,7 +144,7 @@ class AllChatContainer extends React.Component {
                   </FormControl>
                 </Grid>
 
-                <Grid item xs={1}>
+                <Grid item xs={2} md={1}>
                   <Grid
                     container
                     alignItems={"center"}

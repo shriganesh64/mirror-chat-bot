@@ -1,6 +1,7 @@
 :root {
   --primary-light-color: #b3e5fc;
   --primary-main-color: #039be5;
+  --background-color: #b7b7b82f;
   --spacing-1: 8px;
   --spacing-2: calc(var(--spacing-1) * 2);
   --spacing-3: calc(var(--spacing-1) * 3);
@@ -18,6 +19,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color) !important;
 }
 
 .chat-container {
@@ -55,4 +57,10 @@
 
 .message-right-background {
   background-color: var(--primary-light-color) !important;
+}
+
+@media only screen and (max-width: 780px) {
+  .chat-container {
+    width: 95%;
+  }
 }
